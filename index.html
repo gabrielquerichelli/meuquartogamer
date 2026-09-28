@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu Quarto Gamer | Reforma, móveis e PC gamer em um só projeto</title>
+<meta name="description" content="Montamos seu quarto gamer completo: obra, pintura, papel de parede, móveis planejados, consultoria e montagem de PC. Pacote completo ou serviços avulsos. Manutenção de PCs.">
+<link rel="canonical" href="https://meuquartogamer.com/">
+<meta property="og:title" content="Meu Quarto Gamer">
+<meta property="og:description" content="Do papel de parede ao PC gamer: seu quarto pronto para jogar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://meuquartogamer.com/">
+<meta name="theme-color" content="#090B10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#090B10; --bg2:#11151C; --card:#181D26; --line:#2A303B;
+  --green:#39FF88; --green-h:#20E875; --purple:#8B5CF6;
+  --text:#F5F7FA; --muted:#9CA3AF;
+  --head:"Chakra Petch",system-ui,sans-serif; --body:"Manrope",system-ui,sans-serif;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.65 var(--body);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch}
+section{padding:88px 0}
+.alt{background:var(--bg2);border-block:1px solid var(--line)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:8px;font:600 1rem var(--head);border:1px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,transform .15s}
+.btn-primary{background:var(--green);color:#04130a}
+.btn-primary:hover{background:var(--green-h)}
+.btn-ghost{border-color:var(--line);background:rgba(9,11,16,.6);color:var(--text)}
+.btn-ghost:hover{border-color:var(--purple)}
+.btn:active{transform:translateY(1px)}
+.btn[disabled]{opacity:.6;cursor:wait}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(9,11,16,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:700 1.15rem var(--head)}
+.logo b{color:var(--green)}
+nav ul{display:flex;gap:28px;list-style:none;padding:0}
+nav a{color:var(--muted);font-weight:500;font-size:.95rem;transition:color .2s}
+nav a:hover{color:var(--text)}
+.nav .btn{min-height:40px;padding:0 18px;font-size:.9rem}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--text);width:44px;height:44px;border-radius:8px;cursor:pointer;font-size:1.2rem}
+
+/* carrossel */
+.carousel{position:relative;height:clamp(460px,78vh,720px);background:var(--bg2);overflow:hidden}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .8s;background:linear-gradient(135deg,#181D26,#1b1436)}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover}
+.carousel::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,11,16,.9) 0%,rgba(9,11,16,.55) 55%,rgba(9,11,16,.15) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 30%);pointer-events:none}
+.hero{position:absolute;inset:0;z-index:2;display:flex;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);max-width:15ch;margin-bottom:18px}
+.hero p{color:#cfd4dc;max-width:48ch;font-size:1.1rem;margin-bottom:28px}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+.ctrl{position:absolute;z-index:3;bottom:24px;right:max(20px,calc((100% - var(--max))/2));display:flex;align-items:center;gap:10px}
+.ctrl button{width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:rgba(9,11,16,.7);color:var(--text);cursor:pointer;font-size:1.1rem}
+.ctrl button:hover{border-color:var(--green);color:var(--green)}
+.dots{display:flex;gap:8px;margin:0 6px}
+.dots button{width:10px;height:10px;padding:0;border-radius:50%;background:var(--line);border:0}
+.dots button[aria-current="true"]{background:var(--green);width:26px;border-radius:6px}
+
+/* serviços */
+.grid{display:grid;gap:20px;margin-top:40px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.97rem}
+.card ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:.93rem}
+.card li{padding-left:22px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:2px;background:var(--green)}
+.ico{width:44px;height:44px;border-radius:10px;background:rgba(57,255,136,.1);display:grid;place-items:center;margin-bottom:18px;color:var(--green)}
+.ico svg{width:24px;height:24px}
+.pack{margin-top:20px;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;padding:36px;border-radius:14px;border:1px solid var(--purple);background:linear-gradient(120deg,rgba(139,92,246,.16),var(--card) 70%)}
+.pack h3{font-size:1.7rem;margin-bottom:10px}
+.pack p{color:var(--muted)}
+.pack .btn{justify-self:end}
+
+/* etapas */
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px;padding:0;list-style:none}
+.steps li{counter-increment:s;border-top:2px solid var(--line);padding-top:18px}
+.steps li::before{content:counter(s);font:700 1.8rem var(--head);color:var(--green)}
+.steps h3{font-size:1.1rem;margin:6px 0}
+.steps p{color:var(--muted);font-size:.93rem}
+
+/* manutenção */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 16px;font-size:.9rem}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font:600 1.1rem var(--head);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--green);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:12px;max-width:70ch}
+
+/* formulário */
+form{display:grid;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:6px;font-size:.9rem;font-weight:500}
+input,select,textarea{width:100%;min-height:48px;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--text);padding:12px 14px;font:inherit}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
+.err{color:#ff7a8a;font-size:.82rem;min-height:1em}
+[aria-invalid="true"]{border-color:#ff7a8a}
+.ok{color:var(--green);font-size:.95rem}
+.hp{position:absolute;left:-9999px}
+
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wa{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--green);color:#04130a;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 24px rgba(57,255,136,.3)}
+.wa:hover{background:var(--green-h)}
+.wa svg{width:28px;height:28px}
+
+@media(max-width:900px){
+  section{padding:64px 0}
+  .g3,.steps,.split,.pack{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .pack{padding:26px}.pack .btn{justify-self:stretch}
+  .split{gap:28px}
+  .burger{display:block}
+  nav{position:absolute;top:68px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding:8px 20px 16px}
+  nav a{display:block;padding:14px 0}
+  .nav>.btn{display:none}
+  .ctrl{right:20px;bottom:16px}
+  .carousel::after{background:linear-gradient(0deg,var(--bg) 0%,rgba(9,11,16,.7) 60%,rgba(9,11,16,.5) 100%)}
+  .hero{align-items:flex-end;padding-bottom:84px}
+}
+@media(max-width:520px){.f2,.steps{grid-template-columns:1fr}.hero .btn{flex:1 1 100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#topo" class="logo" aria-label="Meu Quarto Gamer">meu<b>quarto</b>gamer</a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#manutencao">Manutenção de PC</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#orcamento">Pedir orçamento</a>
+  </div>
+</header>
+
+<main id="topo">
+  <!-- CARROSSEL -->
+  <div class="carousel" role="region" aria-roledescription="carrossel" aria-label="Projetos de quartos gamer">
+    <div id="slides"></div>
+    <div class="hero">
+      <div class="wrap">
+        <h1>Seu quarto gamer pronto para jogar</h1>
+        <p>Cuidamos da obra, dos móveis e do PC. Contrate o projeto completo ou só a etapa de que você precisa.</p>
+        <div class="row">
+          <a class="btn btn-primary" href="#orcamento">Pedir orçamento grátis</a>
+          <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+        </div>
+      </div>
+    </div>
+    <div class="ctrl">
+      <button id="prev" aria-label="Foto anterior">‹</button>
+      <div class="dots" id="dots"></div>
+      <button id="next" aria-label="Próxima foto">›</button>
+    </div>
+  </div>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="wrap">
+      <h2>Do papel de parede ao PC, em um só projeto</h2>
+      <p class="lead">Cada etapa pode ser contratada separadamente. Quando junta tudo, o resultado fica coerente e você lida com uma única equipe.</p>
+      <div class="grid g3">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h13v6H3z"/><path d="M16 6h4v6H10v3"/><path d="M8 15h4v6H8z"/></svg></div>
+          <h3>Reforma e ambientação</h3>
+          <p>Transformamos o quarto com obra no local.</p>
+          <ul><li>Pintura e texturas</li><li>Papel de parede</li><li>Iluminação LED e tomadas</li><li>Isolamento acústico</li></ul>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18v4H3z"/><path d="M5 14v6M19 14v6M6 10V4h12v6"/></svg></div>
+          <h3>Móveis sob medida</h3>
+          <p>Bancada, prateleiras e armários pensados para o seu setup.</p>
+          <ul><li>Mesa gamer e bancada</li><li>Suporte para monitores</li><li>Gestão de cabos</li><li>Cadeira e nichos de exibição</li></ul>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="14" r="3"/><path d="M8 7h4"/></svg></div>
+          <h3>Consultoria e montagem de PC</h3>
+          <p>Peças certas para o seu orçamento e montagem feita por quem entende.</p>
+          <ul><li>Escolha de componentes</li><li>Montagem e cable management</li><li>Instalação e otimização</li><li>Testes de desempenho</li></ul>
+        </article>
+      </div>
+      <div class="pack">
+        <div>
+          <h3>Pacote Quarto Completo</h3>
+          <p>Reforma, móveis e PC no mesmo projeto, com um cronograma único e um responsável do início ao fim.</p>
+        </div>
+        <a class="btn btn-primary" href="#orcamento" data-pack="Pacote completo">Quero o pacote completo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="alt">
+    <div class="wrap">
+      <h2>Como funciona</h2>
+      <ol class="steps">
+        <li><h3>Conversa inicial</h3><p>Você conta o que quer e o orçamento disponível.</p></li>
+        <li><h3>Projeto e proposta</h3><p>Definimos layout, materiais, peças do PC e valores.</p></li>
+        <li><h3>Execução</h3><p>Obra, móveis e montagem seguem um cronograma combinado.</p></li>
+        <li><h3>Entrega</h3><p>Testamos tudo e deixamos o quarto pronto para jogar.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- MANUTENÇÃO -->
+  <section id="manutencao">
+    <div class="wrap split">
+      <div>
+        <h2>Seu PC lento, travando ou esquentando?</h2>
+        <p class="lead">Fazemos manutenção de hardware e software, para PCs montados por nós ou não.</p>
+        <ul class="tags">
+          <li>Limpeza e troca de pasta térmica</li><li>Upgrade de peças</li><li>Formatação e drivers</li><li>Remoção de vírus</li><li>Diagnóstico de travamentos</li>
+        </ul>
+        <a class="btn btn-primary" href="#orcamento" data-pack="Manutenção de PC">Agendar manutenção</a>
+      </div>
+      <div class="card">
+        <h3>Diagnóstico antes do orçamento</h3>
+        <p>Você descreve o problema e nós indicamos a causa provável e o valor antes de qualquer serviço começar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <h2>Dúvidas frequentes</h2>
+      <details><summary>Posso contratar só uma etapa?</summary><p>Sim. Reforma, móveis, consultoria e montagem de PC e manutenção podem ser contratados separadamente.</p></details>
+      <details><summary>Vocês atendem qualquer cidade?</summary><p>Informe sua cidade no formulário e confirmamos se atendemos a sua região.</p></details>
+      <details><summary>Como é feito o orçamento?</summary><p>Depois da conversa inicial, enviamos uma proposta detalhada. O orçamento não tem custo.</p></details>
+      <details><summary>Já tenho o PC. Vocês fazem só o quarto?</summary><p>Sim. Também podemos revisar seu PC e sugerir upgrades se você quiser.</p></details>
+    </div>
+  </section>
+
+  <!-- ORÇAMENTO -->
+  <section id="orcamento">
+    <div class="wrap split">
+      <div>
+        <h2>Peça seu orçamento</h2>
+        <p class="lead">Conte o que você quer fazer. Respondemos pelo WhatsApp com os próximos passos.</p>
+      </div>
+      <form id="form" novalidate>
+        <div class="f2">
+          <label>Nome<input name="nome" autocomplete="name" required><span class="err"></span></label>
+          <label>WhatsApp<input name="tel" type="tel" autocomplete="tel" placeholder="(11) 90000-0000" required><span class="err"></span></label>
+        </div>
+        <div class="f2">
+          <label>Cidade<input name="cidade" autocomplete="address-level2" required><span class="err"></span></label>
+          <label>Serviço
+            <select name="servico" id="servico" required>
+              <option value="">Selecione</option>
+              <option>Pacote completo</option><option>Reforma e ambientação</option><option>Móveis sob medida</option><option>Consultoria e montagem de PC</option><option>Manutenção de PC</option>
+            </select><span class="err"></span>
+          </label>
+        </div>
+        <label>Detalhes (opcional)<textarea name="msg" maxlength="600"></textarea></label>
+        <input class="hp" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button>
+        <p class="ok" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano"></span> meuquartogamer.com</span>
+    <a href="mailto:contato@meuquartogamer.com">contato@meuquartogamer.com</a>
+  </div>
+</footer>
+
+<a class="wa" id="wa" href="#" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.1.500.1.600-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.1.5.2.5.3.1.2.1.8-.1 1.400z"/></svg>
+</a>
+
+<script>
+/* ===== CONFIGURAÇÃO (edite aqui) ===== */
+const WHATSAPP = "551145309222"; // DDI + DDD + número, só dígitos
+const IMAGES = [                  // arquivos da pasta img
+  "img/quarto1.jpg","img/quarto2.jpg","img/quarto3.jpg",
+  "img/quarto4.jpg","img/quarto5.jpg","img/quarto6.jpg"
+];
+const INTERVAL = 5500;
+/* ===================================== */
+
+// Carrossel
+(() => {
+  const box = document.getElementById("slides"), dots = document.getElementById("dots");
+  const car = box.closest(".carousel");
+  let cur = 0, timer;
+  IMAGES.forEach((src, i) => {
+    const s = document.createElement("div");
+    s.className = "slide" + (i ? "" : " on");
+    s.setAttribute("aria-hidden", i ? "true" : "false");
+    const im = new Image();
+    im.src = src; im.alt = "Quarto gamer projetado por Meu Quarto Gamer, foto " + (i + 1);
+    im.decoding = "async";
+    if (i) im.loading = "lazy"; else im.fetchPriority = "high";
+    im.onerror = () => im.remove();   // mantém o fundo em degradê se a imagem faltar
+    s.appendChild(im); box.appendChild(s);
+    const d = document.createElement("button");
+    d.setAttribute("aria-label", "Ir para foto " + (i + 1));
+    d.onclick = () => { go(i); restart(); };
+    dots.appendChild(d);
+  });
+  const slides = [...box.children], dbtn = [...dots.children];
+  function go(n) {
+    cur = (n + slides.length) % slides.length;
+    slides.forEach((s, i) => { s.classList.toggle("on", i === cur); s.setAttribute("aria-hidden", i !== cur); });
+    dbtn.forEach((d, i) => d.setAttribute("aria-current", i === cur));
+  }
+  const restart = () => { clearInterval(timer); if (!matchMedia("(prefers-reduced-motion:reduce)").matches) timer = setInterval(() => go(cur + 1), INTERVAL); };
+  document.getElementById("prev").onclick = () => { go(cur - 1); restart(); };
+  document.getElementById("next").onclick = () => { go(cur + 1); restart(); };
+  car.addEventListener("mouseenter", () => clearInterval(timer));
+  car.addEventListener("mouseleave", restart);
+  let x0 = null;
+  car.addEventListener("touchstart", e => x0 = e.touches[0].clientX, { passive: true });
+  car.addEventListener("touchend", e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) { go(cur + (dx < 0 ? 1 : -1)); restart(); }
+    x0 = null;
+  });
+  go(0); restart();
+})();
+
+// Menu mobile
+const burger = document.querySelector(".burger"), menu = document.getElementById("menu");
+burger.onclick = () => { const o = menu.classList.toggle("open"); burger.setAttribute("aria-expanded", o); };
+menu.addEventListener("click", e => { if (e.target.tagName === "A") { menu.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); } });
+
+// CTAs pré-selecionam o serviço
+document.querySelectorAll("[data-pack]").forEach(a => a.addEventListener("click", () => { document.getElementById("servico").value = a.dataset.pack; }));
+
+// WhatsApp
+const waLink = t => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+document.getElementById("wa").href = waLink("Olá! Vim pelo site meuquartogamer.com e quero saber mais.");
+document.getElementById("ano").textContent = new Date().getFullYear();
+
+// Formulário
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target, btn = f.querySelector("button[type=submit]"), ok = f.querySelector(".ok");
+  if (f.site.value) return; // honeypot
+  let valid = true;
+  f.querySelectorAll("[required]").forEach(el => {
+    const err = el.parentElement.querySelector(".err");
+    let m = "";
+    if (!el.value.trim()) m = "Preencha este campo.";
+    else if (el.name === "tel" && el.value.replace(/\D/g, "").length < 10) m = "Informe DDD e número.";
+    el.setAttribute("aria-invalid", !!m); err.textContent = m;
+    if (m) valid = false;
+  });
+  if (!valid) { f.querySelector("[aria-invalid=true]").focus(); return; }
+  btn.disabled = true; btn.textContent = "Abrindo WhatsApp...";
+  const v = n => f[n].value.trim().slice(0, 600);
+  const txt = `Olá! Meu nome é ${v("nome")} (${v("cidade")}). Tenho interesse em: ${v("servico")}.` +
+    (v("msg") ? `\nDetalhes: ${v("msg")}` : "") + `\nContato: ${v("tel")}`;
+  window.open(waLink(txt), "_blank", "noopener");
+  ok.textContent = "Pronto! Envie a mensagem no WhatsApp para concluir o pedido.";
+  setTimeout(() => { btn.disabled = false; btn.textContent = "Enviar pelo WhatsApp"; }, 2500);
+});
+</script>
+</body>
+</html>
